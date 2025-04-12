@@ -196,6 +196,9 @@
   .h-\[538px\] {
     height: 538px;
   }
+  .h-full {
+    height: 100%;
+  }
   .h-lvh {
     height: 100lvh;
   }
@@ -204,6 +207,9 @@
   }
   .w-\[327px\] {
     width: 327px;
+  }
+  .w-fit {
+    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -234,6 +240,30 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .object-fill {
+    object-fit: fill;
+  }
+  .object-none {
+    object-fit: none;
+  }
+  .object-scale-down {
+    object-fit: scale-down;
+  }
+  .object-bottom {
+    object-position: bottom;
+  }
+  .object-center {
+    object-position: center;
+  }
+  .object-top {
+    object-position: top;
+  }
+  .object-top-left {
+    object-position: left top;
   }
   .px-3\.75 {
     padding-inline: calc(var(--spacing) * 3.75);
