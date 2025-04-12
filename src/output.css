@@ -187,14 +187,26 @@
   .h-\[280px\] {
     height: 280px;
   }
+  .h-full {
+    height: 100%;
+  }
   .h-lvh {
     height: 100lvh;
   }
   .w-\[40px\] {
     width: 40px;
   }
+  .w-\[285px\] {
+    width: 285px;
+  }
+  .w-\[450px\] {
+    width: 450px;
+  }
   .w-\[730px\] {
     width: 730px;
+  }
+  .w-full {
+    width: 100%;
   }
   .items-center {
     align-items: center;
@@ -219,6 +231,18 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .object-contain {
+    object-fit: contain;
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .object-fill {
+    object-fit: fill;
+  }
+  .object-left {
+    object-position: left;
   }
   .text-center {
     text-align: center;
