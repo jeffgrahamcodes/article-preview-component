@@ -21,35 +21,40 @@
   <body
     class="h-lvh flex justify-center items-center bg-(--gray-200)"
   >
-    <main class="bg-white rounded-[10px] overflow-hidden">
-      <article class="flex w-[730px] h-[280px]">
+    <main class="bg-white rounded-[10px] md:overflow-hidden">
+      <article
+        class="flex flex-col md:flex-col w-[327px] md:w-[730px] md:h-[280px]"
+      >
         <figure>
           <img
-            class="w-[285px] h-full object-cover object-left"
+            class="w-full h-[200px] md:w-[285px] md:h-full md:object-left"
             src="./images/drawers.jpg"
             alt=""
           />
         </figure>
-        <section class="w-[450px]">
-          <h1 class="font-bold">
-            Shift the overall look and feel by adding these wonderful
-            touches to furniture in your home
-          </h1>
-          <h2>
-            Ever been in a room and felt like something was missing?
-            Perhaps it felt slightly bare and uninviting. I’ve got
-            some simple tips to help you make any room feel complete.
-          </h2>
+        <section class="pt-4 px-3.75 pb-2 md:w-[450px] grid gap-6">
+          <section class="grid gap-3">
+            <h1 class="font-bold">
+              Shift the overall look and feel by adding these
+              wonderful touches to furniture in your home
+            </h1>
+            <h2>
+              Ever been in a room and felt like something was missing?
+              Perhaps it felt slightly bare and uninviting. I’ve got
+              some simple tips to help you make any room feel
+              complete.
+            </h2>
+          </section>
           <section class="flex">
-            <figure>
+            <figure class="pr-2">
               <img
                 class="w-[40px] h-[40px] rounded-full"
                 src="./images/avatar-michelle.jpg"
                 alt=""
               />
             </figure>
-            <section>
-              <h3>Michelle Appleton</h3>
+            <section class="pr-8 text-[13px]">
+              <h3 class="text-nowrap">Michelle Appleton</h3>
               <h4>28 Jun 2020</h4>
             </section>
             <span>Share</span>
