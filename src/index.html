@@ -18,19 +18,38 @@
 
     <title>Frontend Mentor | Article preview component</title>
   </head>
-  <body class="h-lvh flex justify-center items-center">
-    <main>
+  <body
+    class="h-lvh flex justify-center items-center bg-(--gray-200)"
+  >
+    <main class="bg-white rounded-[10px] overflow-hidden">
       <article class="flex w-[730px] h-[280px]">
         <figure>
           <img src="./images/drawers.jpg" alt="" />
         </figure>
         <section>
-          Shift the overall look and feel by adding these wonderful
-          touches to furniture in your home Ever been in a room and
-          felt like something was missing? Perhaps it felt slightly
-          bare and uninviting. I’ve got some simple tips to help you
-          make any room feel complete. Michelle Appleton 28 Jun 2020
-          Share
+          <h1 class="font-bold">
+            Shift the overall look and feel by adding these wonderful
+            touches to furniture in your home
+          </h1>
+          <h2>
+            Ever been in a room and felt like something was missing?
+            Perhaps it felt slightly bare and uninviting. I’ve got
+            some simple tips to help you make any room feel complete.
+          </h2>
+          <section class="flex">
+            <figure>
+              <img
+                class="w-[40px] h-[40px] rounded-full"
+                src="./images/avatar-michelle.jpg"
+                alt=""
+              />
+            </figure>
+            <section>
+              <h3>Michelle Appleton</h3>
+              <h4>28 Jun 2020</h4>
+            </section>
+            <span>Share</span>
+          </section>
         </section>
       </article>
       <footer class="absolute inset-x-0 bottom-0">
