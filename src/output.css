@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -7,13 +8,22 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-900: oklch(39.6% 0.141 25.723);
     --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-white: #fff;
     --spacing: 8px;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --font-weight-medium: 500;
     --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --gray-900: #48556a;
+    --gray-500: #6e8098;
+    --gray-400: #9daec2;
     --gray-200: #ecf2f8;
   }
 }
@@ -172,9 +182,6 @@
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
-  }
   .contents {
     display: contents;
   }
@@ -187,14 +194,14 @@
   .table {
     display: table;
   }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
   .h-\[40px\] {
     height: 40px;
   }
   .h-\[200px\] {
     height: 200px;
-  }
-  .h-\[538px\] {
-    height: 538px;
   }
   .h-full {
     height: 100%;
@@ -202,14 +209,14 @@
   .h-lvh {
     height: 100lvh;
   }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
   .w-\[40px\] {
     width: 40px;
   }
   .w-\[327px\] {
     width: 327px;
-  }
-  .w-fit {
-    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -229,6 +236,9 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .rounded-\[10px\] {
     border-radius: 10px;
   }
@@ -243,27 +253,6 @@
   }
   .object-cover {
     object-fit: cover;
-  }
-  .object-fill {
-    object-fit: fill;
-  }
-  .object-none {
-    object-fit: none;
-  }
-  .object-scale-down {
-    object-fit: scale-down;
-  }
-  .object-bottom {
-    object-position: bottom;
-  }
-  .object-center {
-    object-position: center;
-  }
-  .object-top {
-    object-position: top;
-  }
-  .object-top-left {
-    object-position: left top;
   }
   .px-3\.75 {
     padding-inline: calc(var(--spacing) * 3.75);
@@ -280,24 +269,62 @@
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
   }
-  .pb-3 {
-    padding-bottom: calc(var(--spacing) * 3);
-  }
-  .pb-4 {
-    padding-bottom: calc(var(--spacing) * 4);
-  }
   .text-center {
     text-align: center;
   }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
   .text-\[13px\] {
     font-size: 13px;
+  }
+  .leading-\[1\.3\] {
+    --tw-leading: 1.3;
+    line-height: 1.3;
+  }
+  .leading-\[1\.4\] {
+    --tw-leading: 1.4;
+    line-height: 1.4;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .tracking-\[0\.12px\] {
+    --tw-tracking: 0.12px;
+    letter-spacing: 0.12px;
+  }
+  .tracking-\[0\.25px\] {
+    --tw-tracking: 0.25px;
+    letter-spacing: 0.25px;
+  }
   .text-nowrap {
     text-wrap: nowrap;
+  }
+  .text-\(--gray-\) {
+    color: var(--gray-);
+  }
+  .text-\(--gray-400\) {
+    color: var(--gray-400);
+  }
+  .text-\(--gray-500\) {
+    color: var(--gray-500);
+  }
+  .text-\(--gray-900\) {
+    color: var(--gray-900);
   }
   .text-blue-800 {
     color: var(--color-blue-800);
@@ -312,16 +339,6 @@
   .md\:h-\[280px\] {
     @media (width >= 48rem) {
       height: 280px;
-    }
-  }
-  .md\:h-full {
-    @media (width >= 48rem) {
-      height: 100%;
-    }
-  }
-  .md\:w-\[285px\] {
-    @media (width >= 48rem) {
-      width: 285px;
     }
   }
   .md\:w-\[450px\] {
@@ -344,13 +361,21 @@
       overflow: hidden;
     }
   }
-  .md\:object-left {
-    @media (width >= 48rem) {
-      object-position: left;
-    }
+}
+@layer base {
+  body {
+    font-family: 'Manrope', sans-serif;
   }
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -362,7 +387,9 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-tracking: initial;
       --tw-outline-style: solid;
     }
   }
